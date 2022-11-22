@@ -5,7 +5,7 @@
              Title="AboutPage">
     <VerticalStackLayout Spacing="10" Margin="10">
         <HorizontalStackLayout Spacing="10">
-            <Image Source="shop_list.png"
+            <Image Source="shop_list.jpg"
  SemanticProperties.Description="My Shopping List"
 HeightRequest="64" />
             <Label FontSize="22" FontAttributes="Bold" Text="My Shopping
