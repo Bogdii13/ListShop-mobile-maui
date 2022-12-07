@@ -16,17 +16,12 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
+                Text="Welcome to my store!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to my store! "
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="My store has a wide variety"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            
 
             <Button
                 x:Name="CounterBtn"

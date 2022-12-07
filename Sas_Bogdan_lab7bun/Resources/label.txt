@@ -1,0 +1,6 @@
+Label
+                Text="Welcome to my store! "
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="My store has a wide variety"
+                FontSize="18"
+                HorizontalOptions="Center" />
