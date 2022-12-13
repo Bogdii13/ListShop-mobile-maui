@@ -7,7 +7,7 @@ using SQLite;
 
 namespace Sas_Bogdan_lab7bun.Models
 {
-    class ShopList
+   public class ShopList
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
