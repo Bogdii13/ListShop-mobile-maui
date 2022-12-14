@@ -18,6 +18,8 @@ namespace Sas_Bogdan_lab7bun.Data
             _database.CreateTableAsync<ShopList>().Wait();
             _database.CreateTableAsync<Product>().Wait();
             _database.CreateTableAsync<ListProduct>().Wait();
+            _database.CreateTableAsync<Shop>().Wait();
+
         }
 
 
@@ -94,6 +96,23 @@ namespace Sas_Bogdan_lab7bun.Data
         {
             return _database.QueryAsync<ListProduct>("select * from ListProduct");
         }
+
+        public Task<List<Shop>> GetShopsAsync()
+        {
+            return _database.Table<Shop>().ToListAsync();
+        }
+        public Task<int> SaveShopAsync(Shop shop)
+        {
+            if (shop.ID != 0)
+            {
+                return _database.UpdateAsync(shop);
+            }
+            else
+            {
+                return _database.InsertAsync(shop);
+            }
+        }
+
 
     }
 }
