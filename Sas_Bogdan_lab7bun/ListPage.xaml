@@ -3,11 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sas_Bogdan_lab7bun.ListPage"
              Title="ListPage">
+    <ContentPage.Content xmlns:local="clr-namespace:Sas_Bogdan_lab7bun">
     <StackLayout Margin="20">
         <Editor Placeholder="Enter the description of the shopping list"
  Text="{Binding Description}"
- HeightRequest="100" />
-        <Grid>
+ HeightRequest="50" >
+            <Editor.Behaviors>
+                <local:ValidationBehaviour />
+            </Editor.Behaviors>
+            </Editor>
+            <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -18,5 +23,17 @@
  Text="Delete"
  Clicked="OnDeleteButtonClicked"/>
         </Grid>
+        <ListView x:Name="listView"
+ Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Detail="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            <Button Text="Delete Item" MaximumWidthRequest="300" Clicked="OnDeleteButtonClicked"/>
+            <Button Text="Add/Choose Item to buy" MaximumWidthRequest="300"
+Clicked="OnChooseButtonClicked"/>
     </StackLayout>
+        </ContentPage.Content>
 </ContentPage>
